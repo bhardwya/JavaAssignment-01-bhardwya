@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gaming Competition</title>
+</head>
+<body>
+<P>Here are <i>three boxes</i>, each of them contains a gift. Click on them and press play to see what you can get</P>
+<h1>Select Wisely Your Box</h1>
+<form action="/result" method="post">
+    <ul>
+        <li th:each="box, boxStat : ${boxes}">
+            <label>
+                <input type="radio" name="box" th:value="${boxStat.index}" th:text="'Box ' + ${boxStat.index + 1}">
+            </label>
+        </li>
+    </ul>
+    <button type="submit">Play</button>
+</form>
+<footer>
+    Yashi BHARDWAJ ~ Student ID: 991670907
+</footer>
+</body>
+
+</html>
